@@ -26,9 +26,10 @@ function c() {
 
 
      em.appendChild(text2)       // 嵌套插入各种元素
-     div3.appendChild(text1)     
-     div3.appendChild(em)
-     div3.appendChild(text3)
+    //  div3.appendChild(text1)     
+    //  div3.appendChild(em)
+    //  div3.appendChild(text3)
+        div3.append(text1,em,text3) // 可以用append简化
 
      body.appendChild(div3)
     

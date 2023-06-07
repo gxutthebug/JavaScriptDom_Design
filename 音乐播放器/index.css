@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #666;
+    background-color: black;
+    text-align: center;
+    /* text-align CSS 属性定义行内内容（例如文字）如何相对它的块父元素对齐。
+    text-align 并不控制块元素自己的对齐，只控制它的行内内容的对齐。可继承 */
+}
+
+audio {
+    margin-top: 30px;
+    width: 450px;
+}
+
+div{
+    height: 420px;
+    margin-top: 50px;
+    /* border: 2px solid #fff; */
+    overflow: hidden;
+}
+
+ul li{
+    height: 30px;
+    line-height: 30px;
+    list-style: none;
+    transition: 0.2s;
+    /*只能过渡有数值的属性(颜色也是数值) , 很多非数值属性没法过渡比如 diaply.......*/
+    /* 这个transition过渡必须放在这里 如果放在li.active中会导致一个问题：由平常态开始触发时有过渡 , 但是高亮结束回到平常态时没有过渡
+    这是因为当高亮结束是li.active类是没有被添加到li上的 ,而你的transition写在高亮类里,自然不会善始善终。 */
+}
+
+li.active{
+    transform: scale(1.5);  
+    /*这里选用transfrom来改变而不使用改变font-szie的方式是因为: 改变font-szie这种几何布局相关的属性会导致reflow,
+    有reflow的产生性能自然会变差,而transform不会导致reflow性能会提高,而且使用transform不会担心布局会乱
+    你用font-szie如果设置了过大的值很明显的可以看到布局会错乱 , 但使用transform无论设置多大的值,布局都不会错乱*/
+    color: #fff;
+}

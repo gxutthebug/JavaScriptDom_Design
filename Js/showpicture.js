@@ -37,7 +37,6 @@ window.onload = function () {
      console.log(body_child.childNodes)  
      const  imgplace = document.getElementById("place")
      console.log(imgplace.childNodes) 
-  
 }
 
 
